@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vibe Coding vs SDD - Expense Tracker</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #1e3c72, #2a5298);
+            min-height: 100vh;
+            padding: 40px 20px;
+        }
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 24px;
+            padding: 35px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+        }
+        h1 {
+            text-align: center;
+            color: #1e3c72;
+            margin-bottom: 10px;
+            font-size: 2.2rem;
+        }
+        .subhead {
+            text-align: center;
+            color: #6c757d;
+            margin-bottom: 40px;
+            font-size: 1.1rem;
+        }
+        h2 {
+            color: #2a5298;
+            margin: 30px 0 15px 0;
+            border-left: 5px solid #28a745;
+            padding-left: 15px;
+        }
+        .badge {
+            display: inline-block;
+            background: #667eea;
+            color: white;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            margin-bottom: 15px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 25px 0;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 14px;
+            text-align: left;
+            vertical-align: top;
+        }
+        th {
+            background: #1e3c72;
+            color: white;
+            font-weight: 600;
+        }
+        tr:nth-child(even) {
+            background-color: #f8f9fa;
+        }
+        .repo-links {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            margin: 30px 0;
+            flex-wrap: wrap;
+        }
+        .btn {
+            display: inline-block;
+            background: #28a745;
+            color: white;
+            text-decoration: none;
+            padding: 12px 24px;
+            border-radius: 30px;
+            font-weight: bold;
+            transition: 0.2s;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .btn:hover {
+            background: #218838;
+            transform: translateY(-2px);
+        }
+        .note {
+            background: #e9ecef;
+            padding: 15px;
+            border-radius: 12px;
+            margin: 20px 0;
+        }
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #e9ecef;
+            color: #6c757d;
+            font-size: 0.85rem;
+        }
+        @media (max-width: 700px) {
+            .container { padding: 20px; }
+            th, td { padding: 8px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <span class="badge">📊 Case Study</span>
+        <h1>🤖 Vibe Coding vs 📝 Spec‑Driven Development</h1>
+        <div class="subhead">Building the same Student Expense Calculator using two different methodologies</div>
+
+        <div class="repo-links">
+            <a href="https://github.com/ganubhav8922/student-expense-calculator/tree/vibe_coded_submission" class="btn">🎨 View Vibe‑Coded Branch</a>
+            <a href="https://github.com/ganubhav8922/student-expense-calculator/tree/sdd_submission" class="btn">📐 View SDD Branch</a>
+        </div>
+
+        <h2>⚖️ Head‑to‑Head Comparison</h2>
+        <table>
+            <thead>
+                <tr><th>Aspect</th><th>Vibe Coding (vibe_coded_submission)</th><th>Spec‑Driven Development (sdd_submission)</th</tr>
+            </thead>
+            <tbody>
+                <tr><td><strong>Starting point</strong></td><td>A high‑level prompt to an AI assistant</td><td>A written technical specification (<code>specification.md</code>)</td></tr>
+                <tr><td><strong>Documentation</strong></td><td>Minimal – only the code itself</td><td>Detailed spec that defines requirements, data model, and acceptance criteria</td></tr>
+                <tr><td><strong>Development process</strong></td><td>Iterative conversation with AI</td><td>Write spec → implement → verify against spec</td></tr>
+                <tr><td><strong>Code structure</strong></td><td>Functional but may be less modular</td><td>Clean, consistent, traceable back to spec</td></tr>
+                <tr><td><strong>Predictability</strong></td><td>Lower – different prompts yield different results</td><td>High – spec locks down behavior before coding</td></tr>
+                <tr><td><strong>Best suited for</strong></td><td>Rapid prototyping, personal projects</td><td>Team projects, long‑term maintenance</td></tr>
+            </tbody>
+        </table>
+
+        <h2>📊 Observations from This Project</h2>
+        <div class="note">
+            <ul style="margin-left: 20px;">
+                <li><strong>Speed:</strong> Vibe coding produced a working app very quickly. However, small bugs required additional prompts.</li>
+                <li><strong>Structure:</strong> The SDD version has clear functions that mirror the spec. The vibe version is more "flat".</li>
+                <li><strong>Maintainability:</strong> A new developer can read <code>specification.md</code> and instantly understand the SDD app's boundaries.</li>
+                <li><strong>Learning:</strong> Vibe coding is great for exploration; SDD teaches disciplined software engineering.</li>
+            </ul>
+        </div>
+
+        <h2>💡 Final Verdict</h2>
+        <p><strong>Vibe coding is like sketching with a smart pencil</strong> – it's wonderful for ideation and rapid prototyping. But <strong>Spec‑Driven Development is like building with a blueprint</strong> – it gives you predictability, shared understanding, and confidence that the software will behave as intended, especially when multiple people work on it or when requirements are complex.</p>
+        <p>The best engineers learn to use <em>both</em>: vibe coding for exploration, then SDD for production‑ready systems.</p>
+
+        <footer>
+            <p>📁 Repository: <a href="https://github.com/ganubhav8922/student-expense-calculator">ganubhav8922/student-expense-calculator</a><br>
+            🧪 SDD Branch includes <code>specification.md</code> – Vibe branch does not.<br>
+            🚀 Created as a practical demonstration of modern development methodologies.</p>
+        </footer>
+    </div>
+</body>
+</html>
