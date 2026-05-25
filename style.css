@@ -1,0 +1,82 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    min-height: 100vh;
+    padding: 20px;
+}
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 20px;
+    padding: 25px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+}
+h1 { text-align: center; margin-bottom: 20px; color: #1e3c72; }
+.form-card {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    background: #f8f9fa;
+    padding: 15px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+}
+.form-card input, .form-card select, .form-card button {
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+.form-card input { flex: 2; min-width: 120px; }
+.form-card select { flex: 1; min-width: 100px; }
+.form-card button {
+    background: #28a745;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+.clear-btn { background: #dc3545 !important; }
+.filter-area { text-align: right; margin-bottom: 15px; }
+.filter-area select { margin-left: 10px; padding: 5px; }
+.stats {
+    background: #e9ecef;
+    padding: 15px;
+    border-radius: 12px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+canvas { max-width: 100%; margin-top: 10px; }
+.expense-list ul { list-style: none; max-height: 400px; overflow-y: auto; }
+.expense-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #f1f3f5;
+    margin-bottom: 8px;
+    padding: 10px 15px;
+    border-radius: 8px;
+    flex-wrap: wrap;
+}
+.expense-info { display: flex; gap: 15px; align-items: baseline; }
+.expense-name { font-weight: bold; }
+.expense-category { color: #6c757d; }
+.expense-amount { color: #28a745; font-weight: bold; }
+.actions button {
+    margin-left: 8px;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.edit-btn { background: #ffc107; }
+.delete-btn { background: #dc3545; color: white; }
+@media (max-width: 600px) {
+    .form-card { flex-direction: column; }
+    .expense-info { flex-direction: column; gap: 5px; }
+    .actions { margin-top: 8px; }
+}
